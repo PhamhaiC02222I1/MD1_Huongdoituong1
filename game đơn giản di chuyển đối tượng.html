@@ -20,16 +20,16 @@
             ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
     };
     this.moveRight = function () {
-        this.left += this.speed;
+        this.left += 50;
     };
     this.moveDown = function () {
-        this.top += this.speed;
+        this.top += 50;
     };
     this.moveLeft = function () {
-        this.left -= this.speed;
+        this.left -= 50;
     }
     this.moveUp = function () {
-        this.top -= this.speed;
+        this.top -= 50;
     }
 }
 let hero = new Hero('anh-chibi-naruto_110701874.jpg', 20, 30, 100,300);
@@ -45,11 +45,8 @@ function start() {
         hero.moveUp();
     }
     document.getElementById('game').innerHTML = hero.getHeroElement();
-    setTimeout(start, 500)
+    setTimeout(start, 300)
 }
-hero.left > window.innerWidth - hero.size && window.innerHeight - hero.size > hero.top
-
-window.innerHeight - hero.size < hero.top
 start();
 </script>
 </body>
